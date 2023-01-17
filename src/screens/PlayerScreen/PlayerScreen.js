@@ -18,6 +18,7 @@ import TopBar from '../../components/TopBar/TopBar';
 const PlayerScreen = ({ navigation, route }) => {
 
   const { song , album } = route.params //caso undefined
+  const [ imgBand, setImgBanda ] = useState('')
 
   const albumLength  = album.length -1
   const { 
@@ -30,13 +31,15 @@ const PlayerScreen = ({ navigation, route }) => {
     setupPlayer  
   } = useCustomTrackPlayer()
 
+  
   useEffect(() => {
     
+    setImgBanda(song.item.artist)
     setupPlayer(album, song)
     return () => {
       TrackPlayer.destroy();
     };
-
+    
   }, [album, song])
   
 
@@ -47,7 +50,7 @@ const PlayerScreen = ({ navigation, route }) => {
       <TopBar navigation = { navigation } title = "AHORA ESCUCHANDO" />
 
       {/* IMAGE */}
-      <ArtistImage/>
+      <ArtistImage  imgBand = { imgBand } />
       
       {/* ARTIST */}
       <View style={ styles.playerscreen__artist_container }>

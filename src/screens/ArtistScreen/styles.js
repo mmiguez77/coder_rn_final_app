@@ -85,6 +85,14 @@ const styles = StyleSheet.create({
         marginTop: 25,
     },
 
+    // FLATLIST
+    flatlist_margin_sup: {
+        marginTop: 20,
+        paddingHorizontal: 7,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginRight: 25,
+    }
 
 });
 

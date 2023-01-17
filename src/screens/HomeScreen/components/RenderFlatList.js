@@ -5,6 +5,13 @@ import styles from "../styles"
 
 const RenderFlatList = ({ item, navigation }) => {
 
+  img = ''
+  if (item.item.name == "Audioslave" ) {
+    img = require('../../../assets/img/audio.jpg')
+  } else {
+    img = require('../../../assets/img/alma.png')
+  }
+
   return (
     <View 
       key={item.index} 
@@ -20,7 +27,7 @@ const RenderFlatList = ({ item, navigation }) => {
           style={ styles.homescreen__image_pressable} 
         >
           <Image
-            source={require('../../../assets/img/no-image.jpg')}
+            source={ img }
             style={ styles.homescreen__image_rounded }
             resizeMode={ "cover" }
           /> 

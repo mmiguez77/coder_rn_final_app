@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FlatList, View, ActivityIndicator } from 'react-native';
+import { FlatList, View, ActivityIndicator, Text } from 'react-native';
 
 // custom components
 import RenderFlatList from './components/RenderFlatList';
@@ -40,6 +40,7 @@ const ArtistScreen = ({ navigation, route }) => {
           {/* TOP */}
           <TopBar navigation={ navigation } title= "DISCOS" />
 
+          <Text style= {{ fontWeight: 'bold', fontSize: 16, marginTop: 10, padding: 7 }} > Albums</Text>
           { /* FLAT_LIST */ }      
           <FlatList
             renderItem={ (item) => <RenderFlatList
