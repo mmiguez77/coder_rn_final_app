@@ -34,7 +34,9 @@ const PlayerScreen = ({ navigation, route }) => {
   
   useEffect(() => {
     
-    setImgBanda(song.item.artist)
+
+    if (song != undefined) {setImgBanda(song.item.artist)}
+
     setupPlayer(album, song)
     return () => {
       TrackPlayer.destroy();

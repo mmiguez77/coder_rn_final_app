@@ -8,13 +8,13 @@ const LatestSong = () => {
   return (
     <View style={ styles.playlistscreen__latestsong_container }>
       <View style={ styles.playlistscreen__latestsong_avatar_container }>
-        <Text>Avatar</Text>
         <View>
-          <Text>Latest Song</Text>
-          <Text>24 Tracks</Text>
+          <Text>Avatar Imagen</Text>
+          <Text>Última Canción Song</Text>
+          <Text>24 Canciones</Text>
           <View>
-            <Text>Play All</Text>
-            <Text>Share</Text>
+            <Text>Play</Text>
+            <Text>Compartir</Text>
 
           </View>
         </View>

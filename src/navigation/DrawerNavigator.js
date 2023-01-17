@@ -64,7 +64,7 @@ const DrawerNavigator = () => {
             <Drawer.Screen 
                name="Escuchar" 
                component={PlayerScreen}
-               initialParams={{ song: {}, album: [] }}
+               initialParams={{ song: '', album: [] }}
             />
             
             <Drawer.Screen 
